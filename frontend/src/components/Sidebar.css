@@ -202,6 +202,12 @@
   letter-spacing: 0.02em;
 }
 
+.about-text {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* Actions */
 .sidebar-actions {
   margin-top: auto;

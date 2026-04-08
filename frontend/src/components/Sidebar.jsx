@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { getConfig } from '../api/bedrockApi';
+import { useState } from 'react';
 import './Sidebar.css';
 
 export default function Sidebar({
@@ -10,14 +9,7 @@ export default function Sidebar({
   stats,
   onClearChat,
 }) {
-  const [config, setConfig] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
-
-  useEffect(() => {
-    getConfig()
-      .then(setConfig)
-      .catch(() => setConfig(null));
-  }, []);
 
   return (
     <>
@@ -89,25 +81,13 @@ export default function Sidebar({
           </div>
         </div>
 
-        {/* Info Section */}
+        {/* About Section */}
         <div className="sidebar-section">
           <h3 className="sidebar-heading">ℹ️ About</h3>
-          <div className="info-list">
-            <div className="info-item">
-              <span className="info-key">Region</span>
-              <span className="info-value">{config?.region || '—'}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-key">Model</span>
-              <span className="info-value">{config?.model || '—'}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-key">KB ID</span>
-              <span className="info-value info-mono">
-                {config?.knowledgeBaseId?.slice(0, 10) || '—'}
-              </span>
-            </div>
-          </div>
+          <p className="about-text">
+            Enterprise Knowledge Base Q&A system powered by Amazon Bedrock. 
+            Ask questions about company documents and get accurate, citation-backed answers.
+          </p>
         </div>
 
         {/* Actions */}
