@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-lg);
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  animation: fadeIn 0.4s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.header-logo {
+  font-size: 1.75rem;
+  line-height: 1;
+  animation: pulse-glow 3s ease-in-out infinite;
+  background: var(--bg-glass);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.header-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: 500;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  transition: all var(--transition-base);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background var(--transition-base);
+}
+
+.status-connected .status-dot {
+  background: var(--success);
+  box-shadow: 0 0 6px var(--success);
+}
+
+.status-connected .status-label {
+  color: var(--success);
+}
+
+.status-error .status-dot {
+  background: var(--error);
+  box-shadow: 0 0 6px var(--error);
+}
+
+.status-error .status-label {
+  color: var(--error);
+}
+
+.status-disconnected .status-dot {
+  background: var(--text-muted);
+}
+
+.status-disconnected .status-label {
+  color: var(--text-muted);
+}
+
+.status-checking .status-dot {
+  background: var(--warning);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.status-checking .status-label {
+  color: var(--warning);
+}
+
+@media (max-width: 768px) {
+  .header-subtitle {
+    display: none;
+  }
+
+  .status-label {
+    display: none;
+  }
+}

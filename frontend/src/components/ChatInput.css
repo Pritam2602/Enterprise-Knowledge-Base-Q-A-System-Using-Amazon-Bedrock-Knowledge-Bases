@@ -1,0 +1,109 @@
+.chat-input-form {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.chat-input-wrapper:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.chat-textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  line-height: 1.5;
+  resize: none;
+  max-height: 150px;
+  padding: var(--space-sm) 0;
+}
+
+.chat-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.chat-textarea:disabled {
+  opacity: 0.5;
+}
+
+.chat-input-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.char-count {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--bg-glass);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.send-btn.active {
+  background: var(--accent-primary);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.send-btn.active:hover {
+  background: #5558e6;
+  transform: scale(1.05);
+}
+
+.send-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.input-hint {
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  opacity: 0.6;
+}
+
+.input-hint kbd {
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  font-family: inherit;
+  font-size: 0.6rem;
+}

@@ -1,0 +1,111 @@
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl);
+  animation: fadeIn 0.6s ease;
+}
+
+.welcome-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+  animation: pulse-glow 3s ease-in-out infinite;
+  background: var(--bg-glass);
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+}
+
+.welcome-title {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.03em;
+}
+
+.welcome-description {
+  max-width: 520px;
+  color: var(--text-secondary);
+  font-size: var(--font-base);
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+}
+
+.suggested-questions {
+  width: 100%;
+  max-width: 640px;
+}
+
+.suggested-label {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+.suggested-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.suggested-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family);
+  transition: all var(--transition-base);
+}
+
+.suggested-btn:hover {
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.05);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.suggested-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.suggested-text {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.suggested-btn:hover .suggested-text {
+  color: var(--text-primary);
+}
+
+/* Messages List */
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-md);
+}
