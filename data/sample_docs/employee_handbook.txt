@@ -1,0 +1,128 @@
+================================================================================
+                  TECHCORP INDUSTRIES - EMPLOYEE HANDBOOK
+                      Human Resources Department
+                      Last Updated: March 1, 2026
+================================================================================
+
+1. WELCOME TO TECHCORP
+--------------------------------------------------------------------------------
+Welcome to TechCorp Industries! We are thrilled to have you join our team. This
+handbook provides essential information about our company culture, policies, and
+the resources available to help you succeed in your career with us.
+
+Our Mission: To deliver innovative technology solutions that empower businesses
+and improve lives.
+
+Our Values:
+- Innovation: We embrace creativity and push the boundaries of technology
+- Integrity: We act with honesty and transparency in everything we do
+- Collaboration: We achieve more together through teamwork
+- Excellence: We strive for the highest quality in our work
+- Inclusion: We celebrate diversity and foster a welcoming environment
+
+2. ONBOARDING PROCESS
+--------------------------------------------------------------------------------
+2.1 First Day Checklist
+Your onboarding coordinator will guide you through the following:
+- [ ] Receive employee ID badge and building access card
+- [ ] Set up workstation (laptop, monitors, peripherals)
+- [ ] Complete IT account setup (email, Slack, Jira, GitHub)
+- [ ] Review and sign required documents (NDA, IP agreement, handbook acknowledgment)
+- [ ] Meet your team and direct supervisor
+- [ ] Tour of the office and facilities
+
+2.2 First Week
+- Complete mandatory compliance training (2 hours)
+- Complete security awareness training (1 hour)
+- Meet with your manager to review 30/60/90 day goals
+- Join relevant Slack channels and distribution groups
+- Attend New Hire Orientation session (every Friday, 2-4 PM)
+
+2.3 Probationary Period
+All new employees undergo a 90-day probationary period during which:
+- Performance is evaluated at 30, 60, and 90 days
+- Employment may be terminated with one week's notice by either party
+- Benefits eligibility begins on Day 1, but some benefits (401k match) begin
+  after the probationary period
+
+3. PERFORMANCE MANAGEMENT
+--------------------------------------------------------------------------------
+3.1 Performance Reviews
+- Annual Review: Conducted in March, includes self-assessment, manager evaluation,
+  and peer feedback (360-degree review)
+- Mid-Year Check-In: Conducted in September, informal progress review
+- Quarterly Goals: Set collaboratively with your manager each quarter
+
+3.2 Rating Scale
+5 - Exceptional: Consistently exceeds all expectations
+4 - Exceeds Expectations: Regularly exceeds job requirements
+3 - Meets Expectations: Fulfills all job requirements satisfactorily
+2 - Needs Improvement: Falls below expectations in some areas
+1 - Unsatisfactory: Does not meet minimum job requirements
+
+3.3 Career Development
+TechCorp Industries is committed to employee growth. Resources include:
+- Individual Development Plans (IDPs) created with your manager
+- Internal Job Postings: Employees with 12+ months tenure can apply for transfers
+- Mentorship Program: Pairing with senior employees for career guidance
+- Conference Budget: Up to $2,500 per year for approved industry conferences
+- Training Budget: $5,000 per year for courses, certifications, and workshops
+
+4. WORKPLACE CULTURE AND FACILITIES
+--------------------------------------------------------------------------------
+4.1 Office Facilities
+- Cafeteria: Subsidized meals available 8 AM - 2 PM (employees pay 30% of cost)
+- Fitness Center: Free gym on Floors B1, open 6 AM - 10 PM
+- Game Room: Pool table, foosball, board games (available during breaks)
+- Quiet Rooms: Reservable rooms for focused work or personal calls
+- Mother's Room: Private rooms on each floor for nursing mothers
+- Parking: Free parking in designated employee lots (register at Front Desk)
+
+4.2 Communication Tools
+- Email: Microsoft Outlook (primary formal communication)
+- Instant Messaging: Slack (day-to-day team communication)
+- Video Conferencing: Microsoft Teams (meetings and presentations)
+- Project Management: Jira and Confluence
+- Code Collaboration: GitHub Enterprise
+
+4.3 Company Events
+- Town Hall Meetings: Monthly all-hands meeting with leadership (first Monday)
+- Team Building: Quarterly team activities (budget: $50 per employee)
+- Annual Company Retreat: 3-day offsite event in October
+- Holiday Party: Annual celebration in December
+- Hack Days: Bi-annual innovation days where employees work on passion projects
+
+5. HEALTH AND WELLNESS
+--------------------------------------------------------------------------------
+5.1 Employee Assistance Program (EAP)
+Free, confidential counseling and support services available 24/7:
+- Mental health counseling (up to 8 sessions per year)
+- Financial planning advice
+- Legal consultation
+- Work-life balance coaching
+Phone: 1-800-555-HELP | Online: eap.techcorp.com
+
+5.2 Wellness Programs
+- Annual Health Screening: Free on-site health checks in June
+- Flu Vaccinations: Free for all employees and their families
+- Mental Health Days: 3 additional paid days per year for mental wellness
+- Ergonomic Assessment: Free workstation evaluation by certified ergonomist
+- Wellness Challenges: Monthly step challenges, meditation programs
+
+6. EXIT PROCEDURES
+--------------------------------------------------------------------------------
+6.1 Resignation
+Employees wishing to resign must provide:
+- Individual Contributors: 2 weeks written notice
+- Managers: 4 weeks written notice
+- Directors and above: 8 weeks written notice
+
+6.2 Exit Process
+- Submit resignation letter to your manager and HR
+- Complete knowledge transfer documentation
+- Return all company property (laptop, badge, keys, equipment)
+- Complete exit interview with HR
+- Final paycheck and unused PTO payout within 14 days
+
+For any questions, please contact your HR Business Partner or email hr@techcorp.com.
+================================================================================

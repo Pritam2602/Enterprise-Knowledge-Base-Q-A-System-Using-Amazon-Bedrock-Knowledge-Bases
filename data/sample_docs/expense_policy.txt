@@ -1,0 +1,128 @@
+================================================================================
+                   TECHCORP INDUSTRIES - EXPENSE POLICY
+                        Finance Department
+                    Last Updated: January 20, 2026
+================================================================================
+
+1. PURPOSE
+--------------------------------------------------------------------------------
+This policy outlines the procedures for submitting, approving, and reimbursing
+business-related expenses incurred by employees of TechCorp Industries. All
+employees are expected to exercise good judgment and fiscal responsibility when
+incurring business expenses.
+
+2. GENERAL PRINCIPLES
+--------------------------------------------------------------------------------
+- All expenses must be reasonable, necessary, and directly related to business
+- Employees should seek the most cost-effective options when making purchases
+- Expenses must be supported by original receipts or documentation
+- Personal expenses must never be charged to the company
+- Fraudulent expense claims will result in immediate disciplinary action
+
+3. APPROVAL AUTHORITY
+--------------------------------------------------------------------------------
+Expense approval limits (pre-approval required above these amounts):
+- Individual Contributors: Up to $500 (manager approval)
+- Team Leads: Up to $2,000 (director approval)
+- Managers: Up to $5,000 (VP approval)
+- Directors: Up to $10,000 (SVP approval)
+- VPs and above: Up to $25,000 (CFO approval)
+
+Expenses exceeding $25,000 require CEO approval.
+
+4. TRAVEL EXPENSES
+--------------------------------------------------------------------------------
+4.1 Air Travel
+- Domestic flights: Economy class for all employees
+- International flights under 6 hours: Economy class
+- International flights over 6 hours: Business class for Directors and above;
+  Premium Economy for all other employees
+- Flights must be booked at least 14 days in advance when possible
+- Use the corporate travel portal (Concur) for all bookings
+- Preferred airlines: United, Delta, American (for corporate rate benefits)
+
+4.2 Hotel Accommodations
+Maximum nightly rates (including taxes):
+- Tier 1 cities (NYC, SF, London, Tokyo): $300/night
+- Tier 2 cities (Chicago, Seattle, Berlin, Singapore): $250/night
+- Tier 3 cities (all others): $200/night
+- Extended stays (7+ nights): Contact Travel Desk for negotiated rates
+- Hotel bookings must be made through Concur or approved travel agents
+
+4.3 Ground Transportation
+- Rental Cars: Compact or midsize vehicles only; SUVs require manager approval
+- Ride-sharing (Uber/Lyft): Allowed for business purposes; use Business profiles
+- Mileage Reimbursement: $0.67 per mile for personal vehicle use on business
+- Parking: Actual costs reimbursed with receipt
+- Public transportation: Reimbursed at actual cost
+
+4.4 Meals During Travel
+Daily meal allowances (per person):
+- Breakfast: $20
+- Lunch: $30
+- Dinner: $50
+- Total daily maximum: $100
+
+Alcohol is not reimbursable except during approved client entertainment events.
+
+5. CLIENT ENTERTAINMENT
+--------------------------------------------------------------------------------
+5.1 Guidelines
+- Must have a clear business purpose
+- Prior manager approval required for expenses over $200
+- Documentation must include: attendees, business purpose, and relationship to
+  TechCorp
+- Maximum per-person spend: $150 for dinner, $75 for lunch, $50 for coffee/drinks
+
+5.2 Gift Policy
+- Client gifts must not exceed $100 per recipient per year
+- No cash or cash-equivalent gifts (gift cards)
+- Government clients: No gifts permitted (compliance with anti-bribery laws)
+- All gifts must be reported to the Finance team
+
+6. OFFICE AND SUPPLIES EXPENSES
+--------------------------------------------------------------------------------
+- Office supplies: Order through the approved vendor portal (Staples Business)
+- Software licenses: Must be approved by IT department
+- Books and subscriptions: Up to $200/year without approval; above requires
+  manager approval
+- Home office equipment (for remote workers): One-time $500 allowance for desk,
+  chair, and accessories; $100 annual allowance for supplies
+
+7. SUBMISSION AND REIMBURSEMENT PROCESS
+--------------------------------------------------------------------------------
+7.1 Submission Requirements
+- Submit all expense reports within 30 days of incurring the expense
+- Expenses older than 60 days will NOT be reimbursed
+- Required documentation for each expense:
+  * Original receipt (photo or scanned)
+  * Business purpose description
+  * Names of attendees (for meals and entertainment)
+  * Project or cost center code
+
+7.2 How to Submit
+1. Log in to Concur Expense (expense.techcorp.com)
+2. Create a new expense report
+3. Add individual expense items with receipts
+4. Assign appropriate cost center and project codes
+5. Submit for manager approval
+
+7.3 Reimbursement Timeline
+- Approved expenses are reimbursed within 10 business days
+- Reimbursements are deposited directly to the employee's bank account
+- International expenses are converted at the exchange rate on the date incurred
+
+8. NON-REIMBURSABLE EXPENSES
+--------------------------------------------------------------------------------
+The following expenses will NOT be reimbursed:
+- Personal entertainment or leisure activities
+- Traffic violations, parking tickets, or fines
+- Airline upgrades (unless pre-approved)
+- Mini-bar charges
+- Laundry (unless travel exceeds 5 consecutive days)
+- Spouse or companion travel expenses
+- Personal phone charges (unless on an approved BYOD plan)
+- First-class air travel (unless medically required with documentation)
+
+For questions, contact the Finance team at expenses@techcorp.com or ext. 2100.
+================================================================================

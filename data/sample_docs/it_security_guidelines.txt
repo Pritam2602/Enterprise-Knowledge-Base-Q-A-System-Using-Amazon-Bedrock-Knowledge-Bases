@@ -1,0 +1,145 @@
+================================================================================
+               TECHCORP INDUSTRIES - IT SECURITY GUIDELINES
+                    Information Security Department
+                      Last Updated: February 1, 2026
+================================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+This document establishes the information security policies and guidelines for
+all employees, contractors, and third-party users of TechCorp Industries'
+information systems. Compliance with these guidelines is mandatory.
+
+2. PASSWORD POLICY
+--------------------------------------------------------------------------------
+2.1 Password Requirements
+All passwords must meet the following minimum requirements:
+- Minimum length: 12 characters
+- Must contain at least one uppercase letter
+- Must contain at least one lowercase letter
+- Must contain at least one number
+- Must contain at least one special character (!@#$%^&*)
+- Cannot reuse any of the last 12 passwords
+
+2.2 Password Management
+- Passwords must be changed every 90 days
+- Accounts will be locked after 5 consecutive failed login attempts
+- Locked accounts can be unlocked by contacting the IT Help Desk
+- Passwords must never be shared, written down, or stored in plain text
+- Use the company-approved password manager (LastPass Enterprise) for storing
+  credentials
+
+2.3 Multi-Factor Authentication (MFA)
+MFA is required for:
+- All remote access to company systems
+- Access to production environments
+- Administrative console access
+- VPN connections
+- Cloud service management portals (AWS, Azure)
+
+3. DATA CLASSIFICATION AND HANDLING
+--------------------------------------------------------------------------------
+3.1 Data Classification Levels
+- PUBLIC: Information approved for public release
+- INTERNAL: General business information for employee use only
+- CONFIDENTIAL: Sensitive business information with restricted access
+- RESTRICTED: Highly sensitive data requiring maximum protection
+
+3.2 Handling Requirements by Classification
+
+PUBLIC:
+- No special handling required
+- Can be shared externally without approval
+
+INTERNAL:
+- Must not be shared outside the organization
+- Can be shared with all employees
+- Must be stored on company-approved systems
+
+CONFIDENTIAL:
+- Access restricted to authorized personnel only
+- Must be encrypted in transit and at rest
+- Sharing requires manager approval
+- Must be stored in approved secure locations only
+
+RESTRICTED:
+- Access granted on a strict need-to-know basis
+- Must use end-to-end encryption
+- Requires VP-level approval for access
+- Subject to audit logging and monitoring
+- Examples: PII, financial records, trade secrets, source code
+
+4. ACCEPTABLE USE POLICY
+--------------------------------------------------------------------------------
+4.1 Permitted Use
+Company IT resources are provided for business purposes. Limited personal use is
+acceptable provided it does not:
+- Interfere with work responsibilities
+- Consume excessive network bandwidth
+- Violate any company policies or applicable laws
+- Compromise system security
+
+4.2 Prohibited Activities
+The following activities are strictly prohibited on company systems:
+- Installing unauthorized software
+- Accessing or storing illegal content
+- Using company resources for personal business ventures
+- Attempting to bypass security controls
+- Connecting unauthorized devices to the corporate network
+- Using torrent or P2P file-sharing applications
+- Mining cryptocurrency using company resources
+
+5. INCIDENT REPORTING
+--------------------------------------------------------------------------------
+5.1 What to Report
+Employees must report any suspected security incidents, including:
+- Lost or stolen devices (laptops, phones, USB drives)
+- Suspicious emails (phishing attempts)
+- Unauthorized access attempts
+- Malware or virus detections
+- Data breaches or unauthorized data exposure
+- Physical security breaches
+
+5.2 How to Report
+Security incidents must be reported IMMEDIATELY through one of these channels:
+- IT Security Hotline: ext. 4357 (HELP)
+- Email: security@techcorp.com
+- Security Incident Portal: https://security.techcorp.internal
+- For urgent incidents after hours: Call the 24/7 Security Operations Center
+  at +1-800-555-SAFE
+
+5.3 Incident Response Timeline
+- Critical Incidents: Response within 15 minutes
+- High Severity: Response within 1 hour
+- Medium Severity: Response within 4 hours
+- Low Severity: Response within 24 hours
+
+6. REMOTE WORK SECURITY
+--------------------------------------------------------------------------------
+6.1 Requirements for Remote Workers
+- Must use company-provided VPN for all work activities
+- Home Wi-Fi must be secured with WPA3 encryption
+- Company devices must not be shared with family members
+- Screen lock must be enabled with a maximum 5-minute timeout
+- Confidential information must not be discussed in public spaces
+- Video calls containing sensitive information must use approved platforms only
+  (Microsoft Teams or Zoom Enterprise)
+
+6.2 BYOD (Bring Your Own Device) Policy
+Personal devices may be used for work only if:
+- The device is registered with IT department
+- Mobile Device Management (MDM) software is installed
+- Device encryption is enabled
+- The device runs a supported operating system with latest security patches
+- The employee signs the BYOD agreement form
+
+7. SOFTWARE AND UPDATES
+--------------------------------------------------------------------------------
+- All software must be approved by the IT department before installation
+- Operating system and application updates must be applied within 48 hours of
+  release for critical security patches
+- Automatic updates must be enabled on all devices
+- Unsupported or end-of-life software must not be used
+
+For questions, contact the IT Security team at security@techcorp.com.
+================================================================================
