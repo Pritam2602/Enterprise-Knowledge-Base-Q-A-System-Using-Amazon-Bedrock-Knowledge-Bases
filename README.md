@@ -43,7 +43,7 @@
 | **Frontend** | React 18, Vite, Vanilla CSS |
 | **Backend** | Python 3.11+, FastAPI, Uvicorn |
 | **RAG Engine** | Amazon Bedrock Knowledge Bases |
-| **LLM** | Anthropic Claude 3 Sonnet (via Bedrock) |
+| **LLM** | Amazon Nova lite |
 | **Embeddings** | Amazon Titan Embeddings V2 |
 | **Vector Store** | Amazon OpenSearch Serverless (managed) |
 | **Documents** | Amazon S3 |
