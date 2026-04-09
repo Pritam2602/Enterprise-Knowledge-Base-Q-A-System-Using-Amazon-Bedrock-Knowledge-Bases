@@ -230,15 +230,11 @@ async def get_config():
 
 @app.on_event("startup")
 async def startup_event():
-    """Log configuration on startup."""
-    print("\n" + "=" * 60)
-    print("🧠 Enterprise Knowledge Base Q&A System")
-    print("=" * 60)
-    print(f"   Region:          {settings.AWS_REGION}")
-    print(f"   Knowledge Base:  {settings.KNOWLEDGE_BASE_ID}")
-    print(f"   Model:           {settings.get_model_display_name()}")
-    print(f"   CORS Origins:    {', '.join(settings.CORS_ORIGINS)}")
-    print("=" * 60 + "\n")
+    """Log startup confirmation."""
+    print("\n" + "=" * 50)
+    print("[KB] Enterprise Knowledge Base Q&A System")
+    print("   Status: Running")
+    print("=" * 50 + "\n")
 
 
 # ─── Run with Uvicorn ────────────────────────────────────────────────────────

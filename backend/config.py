@@ -50,7 +50,9 @@ class Settings:
 
     def get_model_display_name(self):
         """Extract a human-readable model name from the ARN."""
-        if "claude-3-sonnet" in self.MODEL_ARN:
+        if "claude-3-5-sonnet" in self.MODEL_ARN:
+            return "Claude 3.5 Sonnet"
+        elif "claude-3-sonnet" in self.MODEL_ARN:
             return "Claude 3 Sonnet"
         elif "claude-3-haiku" in self.MODEL_ARN:
             return "Claude 3 Haiku"
@@ -58,6 +60,12 @@ class Settings:
             return "Claude 3 Opus"
         elif "titan" in self.MODEL_ARN.lower():
             return "Amazon Titan"
+        elif "nova-pro" in self.MODEL_ARN:
+            return "Amazon Nova Pro"
+        elif "nova-lite" in self.MODEL_ARN:
+            return "Amazon Nova Lite"
+        elif "nova-micro" in self.MODEL_ARN:
+            return "Amazon Nova Micro"
         else:
             # Return the model ID portion of the ARN
             return self.MODEL_ARN.split("/")[-1] if "/" in self.MODEL_ARN else self.MODEL_ARN

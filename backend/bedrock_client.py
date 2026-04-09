@@ -58,6 +58,22 @@ class BedrockKBClient:
                             "numberOfResults": num_results,
                         }
                     },
+                    "generationConfiguration": {
+                        "promptTemplate": {
+                            "textPromptTemplate": (
+                                "You are a strict enterprise knowledge base assistant. "
+                                "You must ONLY answer based on the retrieved information below. "
+                                "Do NOT use any prior knowledge or general information. "
+                                "If the retrieved information does not contain relevant details "
+                                "to answer the question, respond ONLY with: "
+                                "'I don't have information about this topic in the knowledge base. "
+                                "Please ask a question related to the documents available in the system.'\n\n"
+                                "Retrieved information:\n$search_results$\n\n"
+                                "User question: $query$\n\n"
+                                "Answer (based strictly on retrieved information only):"
+                            )
+                        }
+                    },
                 },
             },
         }
@@ -143,7 +159,7 @@ class BedrockKBClient:
                 ) and attempt < max_retries - 1:
                     wait_time = (2 ** attempt) + 0.5  # Exponential backoff
                     print(
-                        f"⚠️  AWS API throttled (attempt {attempt + 1}/{max_retries}). "
+                        f"[WARN] AWS API throttled (attempt {attempt + 1}/{max_retries}). "
                         f"Retrying in {wait_time}s..."
                     )
                     time.sleep(wait_time)
@@ -155,7 +171,7 @@ class BedrockKBClient:
             except BotoCoreError as e:
                 if attempt < max_retries - 1:
                     wait_time = (2 ** attempt) + 0.5
-                    print(f"⚠️  AWS SDK error (attempt {attempt + 1}/{max_retries}): {e}")
+                    print(f"[WARN] AWS SDK error (attempt {attempt + 1}/{max_retries}): {e}")
                     time.sleep(wait_time)
                     continue
                 raise

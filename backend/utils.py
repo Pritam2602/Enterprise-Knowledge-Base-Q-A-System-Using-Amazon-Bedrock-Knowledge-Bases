@@ -81,7 +81,7 @@ def format_citation(citation_data: dict) -> dict:
 
         results.append(entry)
 
-    return results if results else [formatted]
+    return results
 
 
 def parse_retrieve_and_generate_response(response: dict) -> dict:
@@ -113,10 +113,13 @@ def parse_retrieve_and_generate_response(response: dict) -> dict:
         formatted_refs = format_citation(citation)
         result["citations"].extend(formatted_refs)
 
-    # Remove duplicate citations (same document + same text)
+    # Remove duplicate citations and filter out unknown sources
     seen = set()
     unique_citations = []
     for c in result["citations"]:
+        # Skip citations with no real source
+        if c["documentName"] == "Unknown Source" or not c["text"]:
+            continue
         key = (c["documentName"], c["text"][:100])
         if key not in seen:
             seen.add(key)
