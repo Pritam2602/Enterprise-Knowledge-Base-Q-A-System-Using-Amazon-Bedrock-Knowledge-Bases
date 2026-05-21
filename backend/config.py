@@ -17,6 +17,9 @@ class Settings:
     def __init__(self):
         self.AWS_REGION = os.getenv("AWS_REGION", "eu-north-1")
         self.KNOWLEDGE_BASE_ID = os.getenv("KNOWLEDGE_BASE_ID", "")
+        self.DATA_SOURCE_ID = os.getenv("DATA_SOURCE_ID", "")
+        self.S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "")
+        self.UPLOAD_PREFIX = os.getenv("UPLOAD_PREFIX", "uploads/")
         self.MODEL_ARN = os.getenv(
             "MODEL_ARN",
             f"arn:aws:bedrock:{self.AWS_REGION}::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0",

@@ -4,10 +4,13 @@ Provides REST API endpoints for RAG queries, semantic search, and health checks.
 """
 
 import time
+import re
+from pathlib import PurePath
+from uuid import uuid4
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
 from config import settings
 from bedrock_client import bedrock_client
@@ -50,6 +53,34 @@ class SearchRequest(BaseModel):
     """Request body for semantic search endpoint."""
     question: str = Field(..., min_length=1, max_length=1000, description="The search query")
     num_results: int = Field(default=5, ge=1, le=10, description="Number of results to return")
+
+
+class UploadUrlRequest(BaseModel):
+    """Request body for creating a presigned S3 upload URL."""
+    fileName: str = Field(..., min_length=1, max_length=255)
+    fileType: str = Field(default="application/octet-stream", max_length=120)
+    fileSize: int = Field(..., ge=1, le=50 * 1024 * 1024)
+
+
+class UploadUrlResponse(BaseModel):
+    """Response body for presigned upload URL creation."""
+    uploadUrl: str
+    s3Key: str
+    expiresIn: int
+
+
+class SyncKnowledgeBaseResponse(BaseModel):
+    """Response body for starting a knowledge base ingestion job."""
+    jobId: str
+    status: str
+
+
+class SyncStatusResponse(BaseModel):
+    """Response body for ingestion job status checks."""
+    jobId: str
+    status: str
+    statistics: Dict[str, Any] = Field(default_factory=dict)
+    failureReasons: List[str] = Field(default_factory=list)
 
 
 class CitationResponse(BaseModel):
@@ -96,6 +127,48 @@ class ConfigResponse(BaseModel):
     region: str
     model: str
     knowledgeBaseId: str
+    dataSourceConfigured: bool
+    uploadBucketConfigured: bool
+
+
+ALLOWED_UPLOAD_EXTENSIONS = {".pdf", ".txt", ".html", ".htm", ".docx", ".csv", ".md"}
+PRESIGNED_UPLOAD_TTL_SECONDS = 900
+
+
+def _require_upload_config():
+    """Ensure upload and ingestion settings are present before using admin endpoints."""
+    missing = []
+    if not settings.S3_BUCKET_NAME:
+        missing.append("S3_BUCKET_NAME")
+    if not settings.DATA_SOURCE_ID:
+        missing.append("DATA_SOURCE_ID")
+
+    if missing:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Missing upload configuration: {', '.join(missing)}",
+        )
+
+
+def _build_s3_key(file_name: str) -> str:
+    """Build a safe, unique S3 object key for a user-uploaded file."""
+    original_name = PurePath(file_name).name
+    extension = PurePath(original_name).suffix.lower()
+
+    if extension not in ALLOWED_UPLOAD_EXTENSIONS:
+        allowed = ", ".join(sorted(ALLOWED_UPLOAD_EXTENSIONS))
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported file type '{extension}'. Allowed types: {allowed}",
+        )
+
+    stem = PurePath(original_name).stem
+    safe_stem = re.sub(r"[^A-Za-z0-9._-]+", "-", stem).strip("-._") or "document"
+    prefix = settings.UPLOAD_PREFIX.strip("/")
+
+    if prefix:
+        return f"{prefix}/{uuid4()}-{safe_stem}{extension}"
+    return f"{uuid4()}-{safe_stem}{extension}"
 
 
 # ─── API Endpoints ──────────────────────────────────────────────────────────
@@ -203,6 +276,98 @@ async def search_knowledge_base(request: SearchRequest):
             )
 
 
+@app.post("/api/get-upload-url", response_model=UploadUrlResponse)
+async def get_upload_url(request: UploadUrlRequest):
+    """
+    Create a presigned S3 PUT URL so the frontend can upload a document directly.
+    """
+    _require_upload_config()
+    s3_key = _build_s3_key(request.fileName)
+
+    try:
+        upload_url = bedrock_client.create_upload_url(
+            s3_key=s3_key,
+            content_type=request.fileType,
+            expires_in=PRESIGNED_UPLOAD_TTL_SECONDS,
+        )
+        return UploadUrlResponse(
+            uploadUrl=upload_url,
+            s3Key=s3_key,
+            expiresIn=PRESIGNED_UPLOAD_TTL_SECONDS,
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error creating upload URL: {str(e)}",
+        )
+
+
+@app.post("/api/sync-knowledge-base", response_model=SyncKnowledgeBaseResponse)
+async def sync_knowledge_base():
+    """
+    Start a Bedrock Knowledge Base ingestion job for the configured data source.
+    """
+    _require_upload_config()
+
+    try:
+        response = bedrock_client.start_ingestion_job()
+        ingestion_job = response.get("ingestionJob", {})
+        return SyncKnowledgeBaseResponse(
+            jobId=ingestion_job.get("ingestionJobId", ""),
+            status=ingestion_job.get("status", "STARTING"),
+        )
+    except Exception as e:
+        error_msg = str(e)
+        if "ConflictException" in error_msg:
+            raise HTTPException(
+                status_code=409,
+                detail="An ingestion job is already running for this data source.",
+            )
+        if "AccessDeniedException" in error_msg:
+            raise HTTPException(
+                status_code=403,
+                detail="Access denied to Bedrock ingestion. Check bedrock:StartIngestionJob permissions.",
+            )
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error starting knowledge base sync: {error_msg}",
+        )
+
+
+@app.get("/api/sync-status/{job_id}", response_model=SyncStatusResponse)
+async def get_sync_status(job_id: str):
+    """
+    Get the latest status for a Bedrock Knowledge Base ingestion job.
+    """
+    _require_upload_config()
+
+    try:
+        response = bedrock_client.get_ingestion_job(job_id)
+        ingestion_job = response.get("ingestionJob", {})
+        return SyncStatusResponse(
+            jobId=ingestion_job.get("ingestionJobId", job_id),
+            status=ingestion_job.get("status", "UNKNOWN"),
+            statistics=ingestion_job.get("statistics", {}),
+            failureReasons=ingestion_job.get("failureReasons", []),
+        )
+    except Exception as e:
+        error_msg = str(e)
+        if "ResourceNotFoundException" in error_msg:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Ingestion job '{job_id}' was not found.",
+            )
+        if "AccessDeniedException" in error_msg:
+            raise HTTPException(
+                status_code=403,
+                detail="Access denied to Bedrock ingestion status. Check bedrock:GetIngestionJob permissions.",
+            )
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error checking sync status: {error_msg}",
+        )
+
+
 @app.get("/api/health", response_model=HealthResponse)
 async def health_check():
     """
@@ -223,6 +388,8 @@ async def get_config():
         region=settings.AWS_REGION,
         model=settings.get_model_display_name(),
         knowledgeBaseId=settings.KNOWLEDGE_BASE_ID,
+        dataSourceConfigured=bool(settings.DATA_SOURCE_ID),
+        uploadBucketConfigured=bool(settings.S3_BUCKET_NAME),
     )
 
 

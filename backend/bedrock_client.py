@@ -18,10 +18,76 @@ class BedrockKBClient:
         self.knowledge_base_id = settings.KNOWLEDGE_BASE_ID
         self.model_arn = settings.MODEL_ARN
 
-        # Initialize boto3 client for Bedrock Agent Runtime
+        # Initialize boto3 clients for runtime Q&A, ingestion, and uploads.
         self.client = boto3.client(
             service_name="bedrock-agent-runtime",
             region_name=self.region,
+        )
+        self.agent_client = boto3.client(
+            service_name="bedrock-agent",
+            region_name=self.region,
+        )
+        self.s3_client = boto3.client(
+            service_name="s3",
+            region_name=self.region,
+        )
+
+    def create_upload_url(
+        self,
+        s3_key: str,
+        content_type: str,
+        expires_in: int = 900,
+    ) -> str:
+        """
+        Create a presigned S3 PUT URL for direct browser uploads.
+
+        Args:
+            s3_key: Destination object key in the configured S3 bucket
+            content_type: MIME type the browser will send with the PUT request
+            expires_in: URL lifetime in seconds
+
+        Returns:
+            Presigned PUT URL
+        """
+        return self.s3_client.generate_presigned_url(
+            ClientMethod="put_object",
+            Params={
+                "Bucket": settings.S3_BUCKET_NAME,
+                "Key": s3_key,
+                "ContentType": content_type,
+            },
+            ExpiresIn=expires_in,
+            HttpMethod="PUT",
+        )
+
+    def start_ingestion_job(self) -> dict:
+        """
+        Start a Bedrock Knowledge Base ingestion job for the configured data source.
+
+        Returns:
+            Raw boto3 response from Bedrock Agent
+        """
+        return self._call_with_retry(
+            self.agent_client.start_ingestion_job,
+            knowledgeBaseId=self.knowledge_base_id,
+            dataSourceId=settings.DATA_SOURCE_ID,
+        )
+
+    def get_ingestion_job(self, job_id: str) -> dict:
+        """
+        Fetch the latest status for a Bedrock Knowledge Base ingestion job.
+
+        Args:
+            job_id: Ingestion job ID returned by start_ingestion_job
+
+        Returns:
+            Raw boto3 response from Bedrock Agent
+        """
+        return self._call_with_retry(
+            self.agent_client.get_ingestion_job,
+            knowledgeBaseId=self.knowledge_base_id,
+            dataSourceId=settings.DATA_SOURCE_ID,
+            ingestionJobId=job_id,
         )
 
     def retrieve_and_generate(
