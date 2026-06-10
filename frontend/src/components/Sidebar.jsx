@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DocumentUpload from './DocumentUpload';
 import './Sidebar.css';
 
 export default function Sidebar({
@@ -64,6 +65,12 @@ export default function Sidebar({
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Documents Section */}
+        <div className="sidebar-section">
+          <h3 className="sidebar-heading">Documents</h3>
+          <DocumentUpload />
         </div>
 
         {/* Stats Section */}

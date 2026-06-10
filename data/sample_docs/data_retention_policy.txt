@@ -1,0 +1,177 @@
+================================================================================
+              TECHCORP INDUSTRIES - DATA RETENTION POLICY
+                    Legal and Compliance Department
+                      Last Updated: March 10, 2026
+================================================================================
+
+1. PURPOSE
+--------------------------------------------------------------------------------
+This policy defines how TechCorp Industries stores, retains, archives, and
+disposes of company records and business data. The goal is to preserve required
+information, reduce unnecessary storage of outdated data, and ensure records are
+available for audits, legal reviews, and business continuity needs.
+
+2. SCOPE
+--------------------------------------------------------------------------------
+This policy applies to all employees, contractors, temporary staff, and third
+parties who create, receive, store, process, or dispose of TechCorp data.
+
+Covered systems include:
+- Corporate email and collaboration tools
+- Customer relationship management (CRM) systems
+- Finance, payroll, and procurement platforms
+- Product analytics and operational logs
+- Shared drives and document repositories
+- Backup, archive, and disaster recovery systems
+
+3. DATA RETENTION CATEGORIES
+--------------------------------------------------------------------------------
+3.1 Corporate Records
+Corporate governance records must be retained permanently. These records include:
+- Board meeting minutes
+- Articles of incorporation and company bylaws
+- Stock and ownership records
+- Major corporate transaction approvals
+- Annual audited financial statements
+
+3.2 Financial and Tax Records
+Financial and tax records must be retained for 7 years from the end of the
+fiscal year in which the record was created.
+
+Examples include:
+- General ledger entries
+- Accounts payable and receivable records
+- Tax filings and supporting documentation
+- Vendor invoices
+- Purchase orders and payment approvals
+
+3.3 Employee Records
+Employee personnel files must be retained for 6 years after employment ends.
+Payroll records must be retained for 7 years after the payroll date.
+
+Employee records include:
+- Offer letters and employment agreements
+- Performance reviews
+- Promotion and compensation history
+- Disciplinary notices
+- Termination documentation
+
+3.4 Customer Contract Records
+Customer contracts, order forms, statements of work, and contract amendments must
+be retained for 8 years after contract expiration or termination.
+
+Customer support tickets related to contractual obligations must be retained for
+3 years after ticket closure.
+
+3.5 Product and Engineering Records
+Product requirements, architecture decisions, and release approval records must
+be retained for 5 years after the related product version is retired.
+
+Source code repositories are retained for the active life of the product plus
+10 years after product retirement.
+
+3.6 System Logs and Monitoring Data
+Operational logs must be retained based on business and security need:
+- Standard application logs: 180 days
+- Security event logs: 2 years
+- Production access logs: 1 year
+- Debug logs containing customer data: 30 days maximum
+
+Debug logs must be reviewed and deleted earlier if they contain sensitive data
+that is no longer required for troubleshooting.
+
+4. LEGAL HOLDS
+--------------------------------------------------------------------------------
+A legal hold overrides all normal retention and deletion schedules. When a legal
+hold is issued, employees must preserve all relevant records until the Legal
+Department releases the hold in writing.
+
+Employees must not delete, alter, archive, overwrite, or dispose of records that
+are subject to a legal hold. This requirement applies even if the record has
+reached the end of its normal retention period.
+
+Questions about legal holds must be sent to legalhold@techcorp.com.
+
+5. ARCHIVING REQUIREMENTS
+--------------------------------------------------------------------------------
+Records retained for more than 3 years should be moved to an approved archive
+system when they are no longer needed for daily operations.
+
+Approved archive locations include:
+- TechCorp Records Vault
+- Finance Archive Repository
+- HR Secure Archive
+- Approved cloud storage buckets managed by IT
+
+Archive systems must provide:
+- Access controls based on business need
+- Encryption at rest
+- Audit logs for access and deletion activity
+- Searchable metadata for record owner, record type, and retention date
+
+6. DATA DISPOSAL
+--------------------------------------------------------------------------------
+Records must be securely disposed of when their retention period expires and no
+legal hold, audit request, or business exception applies.
+
+Disposal methods:
+- Paper records: Cross-cut shredding or certified secure destruction
+- Electronic files: Secure deletion using IT-approved tools
+- Storage media: Cryptographic erase or physical destruction
+- Cloud records: Deletion through approved lifecycle management controls
+
+Departments must keep disposal certificates or deletion audit logs for 2 years.
+
+7. EXCEPTIONS
+--------------------------------------------------------------------------------
+Exceptions to this policy require written approval from the record owner, the
+Legal Department, and Information Security.
+
+Exception requests must include:
+- Business reason for the exception
+- Record types affected
+- Requested retention period
+- Security and privacy impact
+- Proposed review date
+
+Approved exceptions must be reviewed at least once every 12 months.
+
+8. ROLES AND RESPONSIBILITIES
+--------------------------------------------------------------------------------
+Employees:
+- Classify and store records in approved systems
+- Follow retention and disposal instructions
+- Preserve records subject to legal holds
+
+Managers:
+- Ensure team records are stored in appropriate repositories
+- Review access to archived records twice per year
+- Confirm disposal activities during quarterly compliance reviews
+
+Legal Department:
+- Issue and release legal holds
+- Interpret retention requirements
+- Approve policy exceptions
+
+Information Security:
+- Validate secure storage and disposal methods
+- Monitor archive access logs
+- Approve tools used for electronic deletion
+
+Records Management Team:
+- Maintain the retention schedule
+- Coordinate archive transfers
+- Provide guidance on record classification
+
+9. REVIEW AND COMPLIANCE
+--------------------------------------------------------------------------------
+The Records Management Team reviews this policy annually. Departments may be
+audited at any time for compliance with retention, archiving, and disposal
+requirements.
+
+Failure to comply with this policy may result in disciplinary action, loss of
+system access, or referral to Legal for further review.
+
+For questions, contact the Records Management Team at records@techcorp.com or
+ext. 2460.
+================================================================================

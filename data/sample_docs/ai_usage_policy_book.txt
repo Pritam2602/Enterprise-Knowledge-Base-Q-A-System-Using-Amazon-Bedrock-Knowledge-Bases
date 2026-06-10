@@ -1,0 +1,153 @@
+================================================================================
+                    TECHCORP INDUSTRIES - AI USAGE POLICY BOOK
+                         Information Governance Office
+                       Effective Date: May 21, 2026
+================================================================================
+
+1. PURPOSE
+--------------------------------------------------------------------------------
+This policy defines how employees may use artificial intelligence tools,
+generative AI assistants, code assistants, summarization tools, transcription
+systems, and automated decision-support tools while working for TechCorp
+Industries.
+
+2. APPROVED AI TOOLS
+--------------------------------------------------------------------------------
+2.1 Approved Tool List
+Employees may use only AI tools listed in the TechCorp Approved AI Registry.
+The registry is maintained by Information Governance and reviewed monthly by
+Legal, Security, Procurement, and Enterprise Architecture.
+
+2.2 New Tool Requests
+Employees who want to use a new AI tool must submit an AI Tool Review Request
+through the Service Desk. Reviews are completed within 10 business days for
+standard tools and 20 business days for tools that process confidential data.
+
+2.3 Personal AI Accounts
+Employees must not use personal AI accounts for company work. This includes
+personal chatbot accounts, browser extensions, personal code assistants, and
+consumer transcription tools.
+
+3. DATA CLASSIFICATION RULES
+--------------------------------------------------------------------------------
+3.1 Public Information
+Public information may be entered into approved AI tools when the output is
+reviewed by an employee before publication or customer use.
+
+3.2 Internal Information
+Internal information may be entered only into approved enterprise AI tools that
+have a signed vendor agreement and security review.
+
+3.3 Confidential Information
+Confidential information may be entered only into approved restricted AI tools.
+Examples include customer contracts, employee records, unreleased financial
+results, source code from private repositories, security findings, and roadmap
+materials.
+
+3.4 Restricted Information
+Restricted information must not be entered into any AI tool unless Legal and
+Information Security grant written exception approval. Restricted information
+includes authentication secrets, private keys, production credentials, payment
+card data, health information, government identifiers, and merger documents.
+
+4. HUMAN REVIEW REQUIREMENTS
+--------------------------------------------------------------------------------
+4.1 No Fully Automated Decisions
+AI tools must not make final employment, compensation, disciplinary, credit,
+legal, vendor selection, or customer-impacting decisions without human review.
+
+4.2 Required Verification
+Employees must verify AI-generated facts, calculations, policy interpretations,
+legal language, and technical recommendations before relying on them.
+
+4.3 Customer-Facing Content
+AI-generated customer-facing content must be reviewed by the responsible content
+owner. Legal review is required for contractual language, claims about product
+capabilities, regulatory statements, and financial representations.
+
+5. SOFTWARE ENGINEERING USE
+--------------------------------------------------------------------------------
+5.1 Code Assistance
+Developers may use approved code assistants for boilerplate, tests, refactoring
+suggestions, documentation drafts, and debugging support.
+
+5.2 Prohibited Code Inputs
+Developers must not paste production secrets, private customer data, incident
+logs containing credentials, or unreleased security vulnerabilities into AI
+tools.
+
+5.3 Required Code Review
+All AI-assisted code must pass normal peer review, automated testing, security
+scanning, and license compliance checks before merge.
+
+5.4 Open Source Risk
+If an AI tool produces code that appears copied from a public project, the
+developer must consult Open Source Compliance before using it.
+
+6. MEETING TRANSCRIPTION AND SUMMARIZATION
+--------------------------------------------------------------------------------
+6.1 Consent Requirement
+AI transcription tools may be used only when meeting participants are notified
+at the start of the meeting. External meetings require explicit customer or
+partner consent before recording or transcription begins.
+
+6.2 Restricted Meetings
+AI transcription is not allowed in meetings involving layoffs, employee health
+matters, legal strategy, acquisition planning, board discussions, or active
+security incidents unless Legal approves an exception.
+
+6.3 Retention
+AI-generated meeting summaries must be stored in the approved team workspace.
+Raw transcripts must be deleted within 30 days unless Legal Hold applies.
+
+7. MODEL OUTPUT LABELING
+--------------------------------------------------------------------------------
+7.1 Internal Labeling
+Documents substantially drafted with AI must include the note "AI-assisted
+draft reviewed by owner" in the internal metadata or document footer.
+
+7.2 External Labeling
+External disclosure is required when AI-generated content could reasonably be
+mistaken for human-authored expert advice, original research, legal advice, or
+financial guidance.
+
+8. INCIDENT REPORTING
+--------------------------------------------------------------------------------
+8.1 Reportable Incidents
+Employees must report the following incidents to security@techcorp.com within
+24 hours:
+- Confidential or restricted data entered into an unapproved AI tool
+- AI tool account compromise
+- AI-generated output sent to a customer with material errors
+- Suspected leakage of source code, credentials, or customer data
+- Discovery that an AI tool stores data outside approved regions
+
+8.2 Response
+Information Security will assess the incident, coordinate containment, notify
+Legal when needed, and determine whether vendor or customer notification is
+required.
+
+9. TRAINING AND COMPLIANCE
+--------------------------------------------------------------------------------
+9.1 Required Training
+All employees must complete AI Acceptable Use Training every 12 months. Employees
+using restricted AI tools must complete an additional 30-minute secure prompting
+module before access is granted.
+
+9.2 Access Review
+Access to restricted AI tools is reviewed quarterly. Employees who no longer
+need access will have permissions removed.
+
+9.3 Violations
+Violations of this policy may result in removal of AI tool access, disciplinary
+action, termination, or legal action depending on severity.
+
+10. POLICY CONTACTS
+--------------------------------------------------------------------------------
+General AI policy questions should be sent to ai-governance@techcorp.com.
+Security questions should be sent to security@techcorp.com.
+Legal review requests should be sent to legal-ops@techcorp.com.
+
+================================================================================
+END OF AI USAGE POLICY BOOK
+================================================================================

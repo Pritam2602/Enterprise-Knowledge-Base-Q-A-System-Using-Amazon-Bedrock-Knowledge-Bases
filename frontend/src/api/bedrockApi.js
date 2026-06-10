@@ -53,6 +53,58 @@ export async function searchDocuments(question, numResults = 5) {
 }
 
 /**
+ * Request a presigned S3 PUT URL for a document upload.
+ */
+export async function getUploadUrl(file) {
+  const response = await fetch(`${API_BASE}/get-upload-url`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      fileName: file.name,
+      fileType: file.type || 'application/octet-stream',
+      fileSize: file.size,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ detail: 'Unknown error' }));
+    throw new Error(error.detail || `HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Start ingestion for the configured Bedrock Knowledge Base data source.
+ */
+export async function syncKnowledgeBase() {
+  const response = await fetch(`${API_BASE}/sync-knowledge-base`, {
+    method: 'POST',
+  });
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ detail: 'Unknown error' }));
+    throw new Error(error.detail || `HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+
+/**
+ * Check ingestion job status.
+ */
+export async function getSyncStatus(jobId) {
+  const response = await fetch(`${API_BASE}/sync-status/${encodeURIComponent(jobId)}`);
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({ detail: 'Unknown error' }));
+    throw new Error(error.detail || `HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+
+/**
  * Check backend health and Bedrock connectivity.
  */
 export async function getHealth() {

@@ -1,0 +1,165 @@
+================================================================================
+                 TECHCORP INDUSTRIES - REMOTE WORK POLICY BOOK
+                         People Operations Department
+                       Effective Date: May 21, 2026
+================================================================================
+
+1. PURPOSE
+--------------------------------------------------------------------------------
+This policy book defines TechCorp Industries' standards for remote, hybrid, and
+distributed work. It is intended to help employees work productively while
+protecting company data, maintaining team coordination, and preserving customer
+service quality.
+
+2. ELIGIBILITY
+--------------------------------------------------------------------------------
+2.1 Eligible Roles
+Remote work eligibility is based on role requirements, performance history, and
+manager approval. Employees in software engineering, design, finance operations,
+HR operations, analytics, customer success, and internal IT support may request
+remote or hybrid arrangements.
+
+2.2 Ineligible Roles
+Roles requiring physical presence, secure facility access, lab equipment,
+on-site customer support, or document custody may be ineligible for regular
+remote work. Exceptions require approval from the department VP and People
+Operations.
+
+2.3 Performance Requirement
+Employees must have no active final written warning and must have achieved a
+"Meets Expectations" or higher rating in the most recent performance cycle.
+
+3. WORK MODES
+--------------------------------------------------------------------------------
+3.1 Office-Based
+Employees work from a TechCorp office at least 4 days per week.
+
+3.2 Hybrid Standard
+Employees work from a TechCorp office 2 or 3 days per week and remotely for the
+remaining workdays. Tuesday and Thursday are recommended collaboration days.
+
+3.3 Remote-First
+Employees work remotely 4 or 5 days per week. Remote-first status requires
+director approval and must be reviewed every 6 months.
+
+3.4 Temporary Remote Work
+Employees may request up to 15 temporary remote workdays per calendar year for
+personal appointments, home repairs, short-term travel disruption, or family
+support needs.
+
+4. CORE HOURS AND AVAILABILITY
+--------------------------------------------------------------------------------
+4.1 Core Collaboration Hours
+All remote and hybrid employees must be reachable during core collaboration
+hours from 10:00 AM to 3:00 PM in their assigned office time zone, Monday through
+Friday, excluding approved leave and public holidays.
+
+4.2 Response Expectations
+- Chat messages from direct team members: respond within 2 business hours
+- Customer-impacting escalations: respond within 30 minutes during core hours
+- Email: respond within 1 business day unless marked urgent
+- Calendar invitations: accept, decline, or propose a new time within 1 business day
+
+4.3 Daily Status Signal
+Remote employees must keep their calendar and chat status current. Employees
+should mark focus time, lunch breaks, school pickup windows, and offline periods
+so teams can plan work without unnecessary interruptions.
+
+5. REMOTE WORK SECURITY
+--------------------------------------------------------------------------------
+5.1 Approved Devices
+Employees must use a company-managed laptop for all company work. Personal
+computers, shared family devices, internet cafes, and public kiosk machines are
+not approved for company systems.
+
+5.2 Network Requirements
+Employees must use a password-protected private network. Public Wi-Fi is allowed
+only when connected to the company VPN. Employees must not access confidential
+company systems from unsecured networks.
+
+5.3 Screen Privacy
+Employees working in public or shared spaces must use a privacy screen when
+viewing confidential information. Confidential calls must not be taken where
+customer, employee, financial, or product information can be overheard.
+
+5.4 Document Handling
+Printed confidential documents are not permitted outside a TechCorp office unless
+approved by Legal and Information Security. Any approved printed materials must
+be stored in a locked cabinet and shredded after use.
+
+6. EQUIPMENT AND EXPENSES
+--------------------------------------------------------------------------------
+6.1 Standard Equipment Package
+Approved hybrid and remote-first employees may request the following equipment:
+- One external monitor
+- One keyboard and mouse set
+- One laptop stand
+- One noise-reducing headset
+- One webcam if the laptop camera is insufficient
+
+6.2 Home Office Stipend
+Remote-first employees are eligible for a one-time home office stipend of $750.
+Hybrid employees are eligible for a one-time stipend of $350. Stipends must be
+used for ergonomic and productivity-related equipment.
+
+6.3 Internet Reimbursement
+Remote-first employees may claim up to $60 per month for home internet service.
+Hybrid employees may claim up to $30 per month when they work remotely at least
+8 days in that month.
+
+6.4 Non-Reimbursable Costs
+TechCorp does not reimburse rent, mortgage payments, utilities, home renovation,
+furniture unrelated to work, childcare, pet care, or coworking spaces unless
+pre-approved by Finance and the department VP.
+
+7. MEETINGS AND COMMUNICATION
+--------------------------------------------------------------------------------
+7.1 Camera Guidelines
+Cameras are recommended for team meetings, customer meetings, interviews, and
+performance conversations. Cameras may be turned off for bandwidth issues,
+health reasons, accessibility needs, or large informational meetings.
+
+7.2 Meeting Hygiene
+Meeting organizers must include an agenda for meetings longer than 15 minutes.
+Recurring meetings should be reviewed quarterly and canceled when they no longer
+create clear value.
+
+7.3 Documentation Standard
+Important decisions made in remote meetings must be documented in the team
+workspace within 1 business day. The note must include the decision, owner,
+deadline, and any open risks.
+
+8. LOCATION AND TRAVEL RULES
+--------------------------------------------------------------------------------
+8.1 Approved Work Location
+Employees must work from the country and state listed in HR records unless they
+receive written approval before changing work location.
+
+8.2 Working From Another State
+Employees may work from another state for up to 20 business days per calendar
+year with manager approval. Longer periods require People Operations and Payroll
+review due to tax, benefits, and employment law requirements.
+
+8.3 International Remote Work
+International remote work is limited to 10 business days per calendar year and
+requires approval from Legal, Payroll, Information Security, and the department
+VP at least 20 business days before travel.
+
+9. COMPLIANCE AND REVIEW
+--------------------------------------------------------------------------------
+9.1 Review Cycle
+All remote-first arrangements must be reviewed every 6 months. Hybrid
+arrangements must be reviewed annually or when role expectations change.
+
+9.2 Policy Violations
+Violations of this policy may result in loss of remote work privileges,
+disciplinary action, or termination depending on severity. Security violations
+must be reported to Information Security immediately.
+
+9.3 Escalation Contact
+Questions about this policy should be sent to remote-work@techcorp.com.
+Security-related questions should be sent to security@techcorp.com.
+
+================================================================================
+END OF REMOTE WORK POLICY BOOK
+================================================================================
